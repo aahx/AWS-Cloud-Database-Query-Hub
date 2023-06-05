@@ -34,7 +34,7 @@ export default function LeftPanel() {
   return (
     <>
       <div>
-        <h1> Left.jsx</h1>
+        <h1> LeftPanel.jsx</h1>
         <select value={selectedDatabase} onChange={handleDatabaseChange}>
           <option value="">Select a database</option>
           <option value="students">Students</option>
@@ -43,10 +43,11 @@ export default function LeftPanel() {
           {loading ? 'Loading...' : 'Load'}
         </button>
       </div>
+
       <div>
+        <h2>Data:</h2>
         {data && (
           <div>
-            <h2>Data:</h2>
             <pre>{JSON.stringify(data, null, 2)}</pre>
           </div>
         )}

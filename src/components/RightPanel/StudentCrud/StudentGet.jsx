@@ -27,16 +27,15 @@ export default function StudentGet() {
             setLoading(false);
             setStudentId("");
         }
-
-    }
+    };
 
     return (
         <>
             <div>
-                <h2> Student Get Form</h2>
+                <h2> Student GET Form</h2>
                 <form>
                     <label htmlFor="studentId">Enter Student ID:</label>
-                    <input type="text" id="studentId" value={studentId} onChange={handleInputChange} placeholder="1" required />
+                    <input type="text" name="studentId" value={studentId} onChange={handleInputChange} placeholder="1" required />
                     <button type="button" onClick={fetchData} disabled={!studentId || loading}>
                         {loading ? 'Loading...' : 'Return'}
                     </button>
