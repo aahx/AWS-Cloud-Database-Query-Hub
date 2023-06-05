@@ -1,52 +1,79 @@
-# Progress:
-(Completed)
-Set up <u>AWS Aurora Serverless v2 PostgreSQL & AWS RDS PostgreSQL</u>.
+# Purpose
 
-(Completed) 
-Connected databases locally to <u>pgAdmin4</u> by setting up <u>Inbound Security Rules and AWS IAM</u>.
+The purpose of this project was to gain hands-on experience with the AWS Cloud Services pipeline. Developed a React app that provides functionality for querying data and performing CRUD (Create, Read, Update, Delete) operations on a student database.
 
-(Completed)
-Set up local environment to connect, build, test <u>AWS Lambda Functions</u> in VS Code by using the following (client side) technologies:
-<u>Node.js</u>, <u>AWS CLI</u>, <u>AWS SAM</u>, <u>AWS ToolKit</u>, <u>Docker Desktop</u>
+## Link to Site
 
-(Completed)
-Created <u>ERD</u> table in <u>Lucid</u> and populated database using pgAdmin and <u>SQL</u>.
+To access the application, please follow this [link](insert_link_here).
 
-(Completed)
-Using AWS SAM to <u>Build and Deploy Lambda Functions</u> with the following server side (AWS) technologies:
-<u>AWS CloudFormation</u>, <u>AWS S3</u>, <u>AWS API Gateway, AWS Lambda</u>, <u>AWS RDS</u>
+## Technologies Used
 
-(Completed)
-Incorporating a “<u>layer</u>” in AWS Lambda for <u>node-packages</u>.
+### Server Side
 
-(Completed)
-Specifically using the <u>node-postgres library</u> to interact with our AWS RDS.
+- **AWS RDS (Aurora PostgreSQL)**: The PostgreSQL database is hosted on AWS RDS.
+- **AWS Lambda**: Microservices are implemented using AWS Lambda functions.
+- **AWS API Gateway**: The Lambda functions are triggered by AWS API Gateway.
+- **AWS IAM**: Identity and Access Management is used for managing access to AWS resources.
+- **AWS CloudFormation**: The application is hosted using AWS CloudFormation.
+- **AWS S3**: AWS S3 buckets are utilized for various purposes.
 
-Use of callbacks, promises, async/await, connection pooling, prepared statements, parsing, etc to interact with our AWS RDS.
+### Client Side
 
-(Completed)	
-Setting up <u>Inbound Security Settings and Roles</u> for database access and modifications.
+- **Node.js**: The application is built using Node.js on the client-side.
+- **VSCode**: Visual Studio Code is the integrated development environment used for coding.
+- **AWS CLI**: AWS Command Line Interface is used for interacting with AWS services from the command line.
+- **AWS SAM**: AWS SAM (Serverless Application Model) is used for creating, testing, and deploying Lambda functions locally.
+- **AWS ToolKit VSCode Extension**: The VSCode extension is used for seamless integration with AWS services.
+- **node-postgres library**: The node-postgres library is used for connecting and interacting with the PostgreSQL database.
+- **SQL**: SQL is used for writing database queries and performing CRUD operations.
+- **pgAdmin**: pgAdmin is a tool used for managing and administering the PostgreSQL database.
+- **Docker Desktop**: Docker Desktop is used for containerizing and running the application.
+- **ThunderClient**: ThunderClient is used for testing API endpoints.
+- **Lucid Chart**: Lucid Chart is used for creating the Entity Relationship Diagram (ERD).
 
-(Completed)	
-Using <u>AWS SAM</u> to <u>modify template.yaml</u>, creating <u>API Gateway Resources and Methods</u> and requireing <u>Body Models</u> to pass standardized event body for queries.
+## Architecture
+>insert image
 
-(Completed)
-Using <u>best practice for parametrized SQL queries to prevent SQL injection vulnerabilities</u>.
+## ERD
+> insert image
 
-(Completed)	
-Using both <u>pathParameters</u> and <u>event body request</u> to implement <u>full CRUD operations</u>.
+### SQL
+> 
 
-(Completed)	
-AWS RDS queries to return pertinent data.
+## Backlog
+Due to time constraints, I was only able to create the React app with the student database. The next steps would involve incorporating the other tables into the app.
 
-(Completed)	
-Using <u>AWS SAM</u> and <u>ThunderClient</u> to test code locally.
+## Issues
+One of the biggest challenges encountered during this project was enabling Cross-Origin Resource Sharing (CORS) and dealing with CORS errors at various stages of development. Although it was eventually resolved, it took a considerable amount of time to figure out the solution.
 
-(Completed)	
-Full Student Model.
+## Resources
 
-(Completed)	
-Enabling <u>CORS</u> (proxy -> Lambda) - Creating <u>Method Response Headers</u> in AWS API Gateway Console.
 
-(in progress)
-React App
+## Work Log (ascending)
+
+Here is a chronological work log of the project, listing the tasks completed in ascending order:
+
+1. Set up **AWS Aurora Serverless v2 PostgreSQL & AWS RDS PostgreSQL**.
+2. Connected databases locally to **pgAdmin4** by setting up **Inbound Security Rules and AWS IAM**.
+3. Set up the local environment to connect, build, and test **AWS Lambda Functions** in VS Code, using the following client-side technologies: **Node.js**, **AWS CLI**, **AWS SAM**, **AWS ToolKit**, **Docker Desktop**.
+4. Created an **ERD** table in **Lucid** and populated the database using pgAdmin and **SQL**.
+5. Used AWS SAM to **Build and Deploy Lambda Functions** with the following server-side (AWS) technologies: **AWS CloudFormation**, **AWS S3**, **AWS API Gateway**, **AWS Lambda**, **AWS RDS**.
+6. Incorporated a "**layer**" in AWS Lambda for **node-packages**.
+7. Specifically used the **node-postgres library** to interact with AWS RDS.
+8. Implemented various techniques such as callbacks, promises, async/await, connection pooling, prepared statements, and parsing to interact with AWS RDS.
+9. Set up **Inbound Security Settings and Roles** for database access and modifications.
+10. Used AWS SAM to **modify template.yaml**, created **API Gateway Resources and Methods**, and required **Body Models** to pass a standardized event body for queries.
+11. Implemented **best practices for parametrized SQL queries** to prevent SQL injection vulnerabilities.
+12. Utilized both **pathParameters** and **event body request** to implement **full CRUD operations**.
+13. Executed AWS RDS queries to retrieve pertinent data.
+14. Used AWS SAM and **ThunderClient** to test code locally.
+15. Completed the full **Student Model** implementation.
+16. Enabled **CORS** (proxy -> Lambda) by creating **Method Response Headers** in the AWS API Gateway Console.
+17. Developed the **React App** for the project.
+18. Utilized **CloudFormation** and **S3** for deployment and hosting.
+
+Please note that this work log represents a chronological order of tasks completed and may not include every detail.
+
+## Link to Site
+
+To access the application, please follow this [link](insert_link_here).
