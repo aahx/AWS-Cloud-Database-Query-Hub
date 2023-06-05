@@ -14,35 +14,24 @@ export default function RightPanel() {
   const handleTableChange = (event) => {
     setSelectedTable(event.target.value);
   };
-  // console.logging
-  useEffect(()=>{
-    console.log("***** s.table ******");
-    console.log(selectedTable);
-  },[selectedTable]);
 
   const handleCRUDChange = (event) => {
     setSelectedCRUD(event.target.value);
   };
-    // console.logging
-    useEffect(()=>{
-      console.log("***** s.CRUD ******");
-      console.log(selectedCRUD);
-    },[selectedCRUD]);
 
   const renderForm = () => {
-    console.log("***** renderForm ******");
-    if(selectedTable === "student"){
-      if(selectedCRUD === "GET"){
-        return <StudentGet/>
+    if (selectedTable === "student") {
+      if (selectedCRUD === "GET") {
+        return <StudentGet />
       }
-      else if(selectedCRUD === "POST"){
-        return <StudentPost/>
+      else if (selectedCRUD === "POST") {
+        return <StudentPost />
       }
-      else if(selectedCRUD === "PATCH"){
-        return <StudentPatch/>
+      else if (selectedCRUD === "PATCH") {
+        return <StudentPatch />
       }
-      else if(selectedCRUD === "DELETE"){
-        return <StudentDelete/>
+      else if (selectedCRUD === "DELETE") {
+        return <StudentDelete />
       }
       else {
         return null;
@@ -50,28 +39,28 @@ export default function RightPanel() {
     }
     return null;
   }
-  
+
   return (
     <>
-    <div>
-      <h1> RightPanel.jsx</h1>
-      <select id="table" value={selectedTable} onChange={(handleTableChange)}>
-        <option value="">Select A Table</option>
-        <option value="student">Student</option>
-      </select>
-    </div>
-    <div>
-      <select id="crud" value={selectedCRUD} onChange={handleCRUDChange}>
-        <option value="">Select Form</option>
-        <option value="GET">GET</option>
-        <option value="POST">POST</option>
-        <option value="PATCH">PATCH</option>
-        <option value="DELETE">DELETE</option>
-      </select>
-    </div>
-    <div>
-      {renderForm()}
-    </div>
+      <div>
+        <h1> RightPanel.jsx</h1>
+        <select id="table" value={selectedTable} onChange={(handleTableChange)}>
+          <option value="">Select A Table</option>
+          <option value="student">Student</option>
+        </select>
+      </div>
+      <div>
+        <select id="crud" value={selectedCRUD} onChange={handleCRUDChange}>
+          <option value="">Select Form</option>
+          <option value="GET">GET</option>
+          <option value="POST">POST</option>
+          <option value="PATCH">PATCH</option>
+          <option value="DELETE">DELETE</option>
+        </select>
+      </div>
+      <div>
+        {renderForm()}
+      </div>
     </>
   );
 }

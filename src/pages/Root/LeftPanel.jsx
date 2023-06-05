@@ -32,21 +32,25 @@ export default function LeftPanel() {
 
 
   return (
-    <div>
-      <h1> Left.jsx</h1>
-      <select value={selectedDatabase} onChange={handleDatabaseChange}>
-        <option value="">Select a database</option>
-        <option value="students">Students</option>
-      </select>
-      <button onClick={handleLoadClick} disabled={!selectedDatabase || loading}>
-        {loading ? 'Loading...' : 'Load'}
-      </button>
-      {data && (
-        <div>
-          <h2>Data:</h2>
-          <pre>{JSON.stringify(data, null, 2)}</pre>
-        </div>
-      )}
-    </div>
+    <>
+      <div>
+        <h1> Left.jsx</h1>
+        <select value={selectedDatabase} onChange={handleDatabaseChange}>
+          <option value="">Select a database</option>
+          <option value="students">Students</option>
+        </select>
+        <button onClick={handleLoadClick} disabled={!selectedDatabase || loading}>
+          {loading ? 'Loading...' : 'Load'}
+        </button>
+      </div>
+      <div>
+        {data && (
+          <div>
+            <h2>Data:</h2>
+            <pre>{JSON.stringify(data, null, 2)}</pre>
+          </div>
+        )}
+      </div>
+    </>
   );
 }
