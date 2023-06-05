@@ -6,6 +6,7 @@ import RightPanel from "../pages/Root/RightPanel";
 
 import StudentGet from "../components/RightPanel/StudentCrud/StudentGet";
 import StudentPost from "../components/RightPanel/StudentCrud/StudentPost";
+import StudentPatch from "../components/RightPanel/StudentCrud/StudentPatch";
 
 export default function Root() {
   return (
@@ -13,8 +14,9 @@ export default function Root() {
     Root.jsx
     {/* <LeftPanel /> */}
     {/* <RightPanel /> */}
-    <StudentGet/>
-    <StudentPost/>
+    {/* <StudentGet/> */}
+    {/* <StudentPost/> */}
+    <StudentPatch/>
     </>
   );
 }
