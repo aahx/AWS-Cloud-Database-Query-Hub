@@ -25,13 +25,9 @@ export default function StudentPost() {
 
     const handleSubmit = async () => {
         const invokeURL = "https://feuzl6d9yk.execute-api.us-west-1.amazonaws.com/test/students";
-        const testURL = "https://dummy.restapiexample.com/api/v1/create";
 
         setLoading(true);
-        
-        console.log("*** sd ***");
-        console.log(studentData);
-        
+                
         try {
             const response = await axios.post(invokeURL, studentData);
             setResponseData(response.data);
@@ -46,24 +42,6 @@ export default function StudentPost() {
             });
         }
     };
-
-
-    // Try Fetch Method
-    // then move on to PATCH
-    // then move on to DELTE
-
-    // then create README
-    // attempts
-    // enabled CORS succesfuly on AWS API Gateway
-    // added appropriate headers to Lambda Function
-    // enabled config to pass headers 
-    // POST method still fails
-    // asked on stackoverflow
-    // works on 
-    // works on: ThunderClient
-    // works on: AWS Api Gateway As Well
-
-
 
     //test
 
