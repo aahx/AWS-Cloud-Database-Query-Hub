@@ -51,7 +51,7 @@ export default function StudentPost() {
                 <h2> Student POST Form</h2>
                 <span className="crud-det">
                     Enter Student Info<br />
-                    * All inputs required
+                    All inputs required*
                 </span>
                 <form>
                     <label htmlFor="firstName">First Name*:</label>

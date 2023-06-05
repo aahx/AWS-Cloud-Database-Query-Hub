@@ -60,11 +60,11 @@ export default function StudentPatch() {
             <div className="crud-form">
                 <h2>Student PATCH Form</h2>
                 <span className="crud-det">
-                    Enter (one or all) Fields To Update
+                    Enter (one or all) Fields To Update - ID required*
                 </span>
                 <form>
 
-                    <label htmlFor="studentId">Student ID required*:</label>
+                    <label htmlFor="studentId">Student ID*:</label>
                     <input
                         type="text"
                         name="studentId"
