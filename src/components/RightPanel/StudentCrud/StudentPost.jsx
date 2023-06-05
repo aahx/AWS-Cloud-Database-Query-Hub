@@ -22,15 +22,6 @@ export default function StudentPost() {
         }));
     };
 
-    // const config = {
-    //     headers: {
-    //         "Access-Control-Allow-Credentials": "true",
-    //         "Access-Control-Allow-Headers": "application/json",
-    //         "Access-Control-Allow-Methods": "OPTIONS, GET, POST, PATCH, DELETE",
-    //         "Access-Control-Allow-Origin": "*"
-    //     }
-    // };
-
 
     const handleSubmit = async () => {
         const invokeURL = "https://feuzl6d9yk.execute-api.us-west-1.amazonaws.com/test/students";
