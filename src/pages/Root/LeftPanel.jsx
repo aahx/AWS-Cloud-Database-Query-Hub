@@ -32,7 +32,7 @@ export default function LeftPanel() {
 
 
   return (
-    <>
+    <section id="left-panel">
       <div>
         <h1> LeftPanel.jsx</h1>
         <select value={selectedDatabase} onChange={handleDatabaseChange}>
@@ -47,11 +47,11 @@ export default function LeftPanel() {
       <div>
         <h2>Data:</h2>
         {data && (
-          <div>
+          <div id="db-data-div">
             <pre>{JSON.stringify(data, null, 2)}</pre>
           </div>
         )}
       </div>
-    </>
+    </section>
   );
 }

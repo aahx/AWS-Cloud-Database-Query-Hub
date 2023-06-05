@@ -41,7 +41,7 @@ export default function RightPanel() {
   }
 
   return (
-    <>
+    <section id="right-panel">
       <div>
         <h1> RightPanel.jsx</h1>
         <select id="table" value={selectedTable} onChange={(handleTableChange)}>
@@ -61,6 +61,6 @@ export default function RightPanel() {
       <div>
         {renderForm()}
       </div>
-    </>
+    </section>
   );
 }
