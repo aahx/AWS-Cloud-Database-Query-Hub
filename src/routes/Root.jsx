@@ -10,7 +10,7 @@ export default function Root() {
     <>
     Root.jsx
     {/* <LeftPanel /> */}
-    {/* <RightPanel /> */}
+    <RightPanel />
     </>
   );
 }

@@ -1,50 +1,77 @@
+/* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 
 import { useState, useEffect } from 'react';
+import StudentGet from '../../components/RightPanel/StudentCrud/StudentGet';
+import StudentPost from '../../components/RightPanel/StudentCrud/StudentPost';
+import StudentPatch from '../../components/RightPanel/StudentCrud/StudentPatch';
+import StudentDelete from '../../components/RightPanel/StudentCrud/StudentDelete';
 
 export default function RightPanel() {
-  const [selectedTable, setSelectedTable] = useState('');
-  const [loading, setLoading] = useState(false);
-  const [data, setData] = useState(null);
+  const [selectedTable, setSelectedTable] = useState("");
+  const [selectedCRUD, setSelectedCRUD] = useState("");
 
-  const handleDatabaseChange = (event) => {
-    setSelectedDatabase(event.target.value);
+  const handleTableChange = (event) => {
+    setSelectedTable(event.target.value);
   };
+  // console.logging
+  useEffect(()=>{
+    console.log("***** s.table ******");
+    console.log(selectedTable);
+  },[selectedTable]);
 
-  const handleLoadClick = async () => {
-    if (!selectedDatabase) {
-      return;
-    }
-
-    setLoading(true);
-
-    try {
-      const response = await axios.get(invokeURL + `/${selectedDatabase}`);
-      setData(response.data);
-    } catch (error) {
-      console.error(error);
-    } finally {
-      setLoading(false);
-    }
+  const handleCRUDChange = (event) => {
+    setSelectedCRUD(event.target.value);
   };
+    // console.logging
+    useEffect(()=>{
+      console.log("***** s.CRUD ******");
+      console.log(selectedCRUD);
+    },[selectedCRUD]);
 
-
+  const renderForm = () => {
+    console.log("***** renderForm ******");
+    if(selectedTable === "student"){
+      if(selectedCRUD === "GET"){
+        return <StudentGet/>
+      }
+      else if(selectedCRUD === "POST"){
+        return <StudentPost/>
+      }
+      else if(selectedCRUD === "PATCH"){
+        return <StudentPatch/>
+      }
+      else if(selectedCRUD === "DELETE"){
+        return <StudentDelete/>
+      }
+      else {
+        return null;
+      }
+    }
+    return null;
+  }
+  
   return (
+    <>
     <div>
-      <h1> Left.jsx</h1>
-      <select value={selectedDatabase} onChange={handleDatabaseChange}>
-        <option value="">Select a database</option>
-        <option value="students">Students</option>
+      <h1> RightPanel.jsx</h1>
+      <select id="table" value={selectedTable} onChange={(handleTableChange)}>
+        <option value="">Select A Table</option>
+        <option value="student">Student</option>
       </select>
-      <button onClick={handleLoadClick} disabled={!selectedDatabase || loading}>
-        {loading ? 'Loading...' : 'Load'}
-      </button>
-      {data && (
-        <div>
-          <h2>Data:</h2>
-          <pre>{JSON.stringify(data, null, 2)}</pre>
-        </div>
-      )}
     </div>
+    <div>
+      <select id="crud" value={selectedCRUD} onChange={handleCRUDChange}>
+        <option value="">Select Form</option>
+        <option value="GET">GET</option>
+        <option value="POST">POST</option>
+        <option value="PATCH">PATCH</option>
+        <option value="DELETE">DELETE</option>
+      </select>
+    </div>
+    <div>
+      {renderForm()}
+    </div>
+    </>
   );
 }
