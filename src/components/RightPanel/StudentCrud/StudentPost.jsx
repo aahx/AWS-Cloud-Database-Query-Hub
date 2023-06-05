@@ -40,22 +40,19 @@ export default function StudentPost() {
         
         console.log("*** sd ***");
         console.log(studentData);
-
-        const res = await fetch(testURL, {
-            method: 'POST',
-            headers: { 
-                'Content-Type': 'application/json',
-                "Access-Control-Allow-Headers" : "*"
-            },
-            body: JSON.stringify(studentData)
-        });
         
-        if(res.ok){
-            console.log("*** ok ***")
-            console.log(res);
-            return res;
-        } else {
-            throw new Error("Invalid Sign Up");
+        try {
+            const response = await axios.post(invokeURL, studentData);
+            setResponseData(response.data);
+        } catch (error) {
+            console.error(error);
+        } finally {
+            setLoading(false);
+            setStudentData({
+                first_name: "",
+                last_name: "",
+                email: ""
+            });
         }
     };
 
@@ -77,18 +74,6 @@ export default function StudentPost() {
 
 
 
-    // setResponseData(response.data);
-    //     } catch (error) {
-    //         console.error(error);
-    //     } finally {
-    //         setLoading(false);
-    //         setStudentData({
-    //             first_name: "",
-    //             last_name: "",
-    //             email: ""
-    //         });
-    //     }
-    // };
 
     return (
         <>
