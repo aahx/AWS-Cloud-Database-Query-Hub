@@ -4,8 +4,11 @@ The purpose of this project was to gain hands-on experience with the AWS Cloud S
 
 ## Link to Site
 
-To access the application, please follow this [d22u7ipb5ydosa.cloudfront.net](d22u7ipb5ydosa.cloudfront.net).
-If there is any issues, please submit issue ticket.
+To access the application, please visit [d22u7ipb5ydosa.cloudfront.net](d22u7ipb5ydosa.cloudfront.net)
+
+To get started, simply select an option from the drop-down menu and hit load.
+
+If you encounter any issues or have any questions while using the application, please feel free to submit an issue ticket for further assistance.
 
 ## Technologies Used
 
@@ -112,4 +115,8 @@ Please note that this work log represents a chronological order of tasks complet
 
 ## Link to Site
 
-To access the application, please follow this [link](insert_link_here).
+To access the application, please visit [d22u7ipb5ydosa.cloudfront.net](d22u7ipb5ydosa.cloudfront.net)
+
+To get started, simply select an option from the drop-down menu and hit load.
+
+If you encounter any issues or have any questions while using the application, please feel free to submit an issue ticket for further assistance.
