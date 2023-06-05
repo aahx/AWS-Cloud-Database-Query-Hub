@@ -1,5 +1,5 @@
-Progress:
-(Completed) 
+# Progress:
+(Completed)
 Set up <u>AWS Aurora Serverless v2 PostgreSQL & AWS RDS PostgreSQL</u>.
 
 (Completed) 
