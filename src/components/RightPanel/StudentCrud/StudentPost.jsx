@@ -52,6 +52,7 @@ export default function StudentPost() {
                 // added appropriate headers to Lambda Function
                 // enabled config to pass headers 
                 // POST method still fails
+                // asked on stackoverflow
             // works on 
                 // works on: ThunderClient
                 // works on: AWS Api Gateway As Well
