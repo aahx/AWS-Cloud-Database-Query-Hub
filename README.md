@@ -4,7 +4,8 @@ The purpose of this project was to gain hands-on experience with the AWS Cloud S
 
 ## Link to Site
 
-To access the application, please follow this [link](insert_link_here).
+To access the application, please follow this [d22u7ipb5ydosa.cloudfront.net](d22u7ipb5ydosa.cloudfront.net).
+If there is any issues, please submit issue ticket.
 
 ## Technologies Used
 
