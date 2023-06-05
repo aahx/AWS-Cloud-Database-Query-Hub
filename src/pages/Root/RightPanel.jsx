@@ -1,11 +1,9 @@
 /* eslint-disable no-unused-vars */
-import axios from 'axios';
+
 import { useState, useEffect } from 'react';
 
-export default function Left() {
-  const invokeURL = "https://feuzl6d9yk.execute-api.us-west-1.amazonaws.com/test";
-
-  const [selectedDatabase, setSelectedDatabase] = useState('');
+export default function RightPanel() {
+  const [selectedTable, setSelectedTable] = useState('');
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState(null);
 
