@@ -63,14 +63,14 @@ export default function StudentPatch() {
                     <h3>Enter Field To Update</h3>
                     <h5>One or All</h5>
 
-                    <label htmlFor="studentId">StudentId:</label>
-                    <h6>* required</h6>
+                    <label htmlFor="studentId">Student Id *required:</label>
                     <input
                         type="text"
                         name="studentId"
                         value={studentId}
                         onChange={handleIdChange}
                         placeholder="Enter student ID"
+                        required
                     />
 
                     <label htmlFor="firstName">First Name:</label>
