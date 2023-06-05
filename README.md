@@ -4,11 +4,11 @@ The purpose of this project was to gain hands-on experience with the AWS Cloud S
 
 ## Link to Site
 
+If the page does not load immediately, please be patient, try refreshing the page, or open it in a new tab.
+
 To access the application, please visit [d22u7ipb5ydosa.cloudfront.net](https://d22u7ipb5ydosa.cloudfront.net)
 
 To get started, simply select an option from the drop-down menu and click "Load".
-
-If the page does not load immediately, please be patient, try refreshing the page, or open it in a new tab.
 
 If you encounter any issues or have any questions while using the application, please feel free to submit an issue ticket for further assistance.
 
