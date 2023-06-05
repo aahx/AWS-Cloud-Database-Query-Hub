@@ -35,7 +35,7 @@ export default function StudentDelete() {
             <div>
                 <h2> Student DELETE Form</h2>
                 <h3> Deletion Permanent </h3>
-                <h4> Please feel free to use </h4>
+                <h4> To view changes , Reload left panel </h4>
 
                 <form>
                     <label htmlFor="studentId">Enter Student ID:</label>

@@ -1,19 +1,21 @@
+/* eslint-disable react-refresh/only-export-components */
 /* eslint-disable no-unused-vars */
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 
-export default function LeftPanel() {
-  const invokeURL = "https://feuzl6d9yk.execute-api.us-west-1.amazonaws.com/test";
 
+export default function LeftPanel() {
   const [selectedDatabase, setSelectedDatabase] = useState('');
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState(null);
-
+  
   const handleDatabaseChange = (event) => {
     setSelectedDatabase(event.target.value);
   };
-
+  
   const handleLoadClick = async () => {
+    const invokeURL = "https://feuzl6d9yk.execute-api.us-west-1.amazonaws.com/test";
+
     if (!selectedDatabase) {
       return;
     }
@@ -21,10 +23,11 @@ export default function LeftPanel() {
     setLoading(true);
 
     try {
-      const response = await axios.get(invokeURL + `/${selectedDatabase}`);
+      const response = await axios.get(`${invokeURL}/${selectedDatabase}`);
       setData(response.data);
     } catch (error) {
       console.error(error);
+      setData(error.message);
     } finally {
       setLoading(false);
     }
@@ -37,6 +40,7 @@ export default function LeftPanel() {
         <h1> LeftPanel.jsx</h1>
         <select value={selectedDatabase} onChange={handleDatabaseChange}>
           <option value="">Select a database</option>
+          <option value="health">API Health Check</option>
           <option value="students">Students</option>
         </select>
         <button onClick={handleLoadClick} disabled={!selectedDatabase || loading}>
