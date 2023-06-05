@@ -36,25 +36,25 @@ export default function StudentPost() {
         const invokeURL = "https://feuzl6d9yk.execute-api.us-west-1.amazonaws.com/test/students";
 
         setLoading(true);
+        
+        console.log("*** sd ***");
+        console.log(studentData);
 
-        try {
-            fetch("https://feuzl6d9yk.execute-api.us-west-1.amazonaws.com/test/students", {
-                method: 'POST',
-                headers: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(studentData)
-            })
-                .then((res) => res.json())
-                .then((data) => {
-                    console.log(data);
-                    setResponseData(data);
-                });
-        } catch (error) {
-            console.error(error);
+        const res = await fetch(invokeURL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(studentData)
+        });
+        
+        if(res.ok){
+            console.log("*** ok ***")
+            console.log(res.json());
+            return res.json();
+        } else {
+            throw new Error("Invalid Sign Up");
         }
     };
+
 
     // Try Fetch Method
     // then move on to PATCH
