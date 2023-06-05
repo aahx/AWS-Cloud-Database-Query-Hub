@@ -58,6 +58,7 @@ export default function StudentPost() {
                 // works on: AWS Api Gateway As Well
 
 
+                
             setResponseData(response.data);
         } catch (error) {
             console.error(error);
