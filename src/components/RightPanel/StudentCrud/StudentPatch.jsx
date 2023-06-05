@@ -60,10 +60,10 @@ export default function StudentPatch() {
             <div>
                 <h2>Student PATCH Form</h2>
                 <form>
-                    <h3>Enter Field To Update</h3>
-                    <h5>One or All</h5>
+                    <h3>Enter (one or all) Fields To Update</h3>
+                    <h4>* Student ID required</h4>
 
-                    <label htmlFor="studentId">Student Id *required:</label>
+                    <label htmlFor="studentId">Student ID*:</label>
                     <input
                         type="text"
                         name="studentId"
