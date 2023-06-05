@@ -33,6 +33,7 @@ export default function StudentPost() {
             setResponseData(response.data);
         } catch (error) {
             console.error(error);
+            setResponseData(error.message);
         } finally {
             setLoading(false);
             setStudentData({

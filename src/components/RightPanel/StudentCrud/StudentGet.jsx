@@ -23,6 +23,7 @@ export default function StudentGet() {
             setData(response.data);
         } catch (error) {
             console.error(error);
+            setResponseData(error.message);
         } finally {
             setLoading(false);
             setStudentId("");

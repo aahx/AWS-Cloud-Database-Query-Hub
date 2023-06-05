@@ -105,7 +105,7 @@ export default function StudentPatch() {
                         onClick={handleSubmit}
                         disabled={!studentId || loading}
                     >
-                        {loading ? "Loading..." : "Submit"}
+                        {loading ? "Loading..." : "Return"}
                     </button>
                 </form>
             </div>
