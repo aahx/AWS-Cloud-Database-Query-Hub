@@ -37,40 +37,54 @@ export default function StudentPost() {
 
         setLoading(true);
 
-        console.log("******");
-        console.log(studentData);
         try {
-            // const response = await axios.post(invokeURL, studentData, config);
-
-            // Try Fetch Method
-            // then move on to PATCH
-            // then move on to DELTE
-
-            // then create README
-            // attempts
-                // enabled CORS succesfuly on AWS API Gateway
-                // added appropriate headers to Lambda Function
-                // enabled config to pass headers 
-                // POST method still fails
-                // asked on stackoverflow
-            // works on 
-                // works on: ThunderClient
-                // works on: AWS Api Gateway As Well
-
-
-                
-            setResponseData(response.data);
+            fetch("https://feuzl6d9yk.execute-api.us-west-1.amazonaws.com/test/students", {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(studentData)
+            })
+                .then((res) => res.json())
+                .then((data) => {
+                    console.log(data);
+                    setResponseData(data);
+                });
         } catch (error) {
             console.error(error);
-        } finally {
-            setLoading(false);
-            setStudentData({
-                first_name: "",
-                last_name: "",
-                email: ""
-            });
         }
     };
+
+    // Try Fetch Method
+    // then move on to PATCH
+    // then move on to DELTE
+
+    // then create README
+    // attempts
+    // enabled CORS succesfuly on AWS API Gateway
+    // added appropriate headers to Lambda Function
+    // enabled config to pass headers 
+    // POST method still fails
+    // asked on stackoverflow
+    // works on 
+    // works on: ThunderClient
+    // works on: AWS Api Gateway As Well
+
+
+
+    // setResponseData(response.data);
+    //     } catch (error) {
+    //         console.error(error);
+    //     } finally {
+    //         setLoading(false);
+    //         setStudentData({
+    //             first_name: "",
+    //             last_name: "",
+    //             email: ""
+    //         });
+    //     }
+    // };
 
     return (
         <>
