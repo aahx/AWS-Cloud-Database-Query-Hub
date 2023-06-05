@@ -41,26 +41,32 @@ export default function RightPanel() {
   }
 
   return (
-    <section id="right-panel">
-      <div>
-        <h1> RightPanel.jsx</h1>
-        <select id="table" value={selectedTable} onChange={(handleTableChange)}>
-          <option value="">Select A Table</option>
-          <option value="student">Student</option>
-        </select>
+    <>
+      <section id="right-panel">
+        <div className='select-form-right'>
+          <div className="select-crud">
+            <h1> CRUD Method </h1>
+            <select id="table" value={selectedTable} onChange={(handleTableChange)}>
+              <option value="">Select A Table</option>
+              <option value="student">Student</option>
+            </select>
+            <select id="crud" value={selectedCRUD} onChange={handleCRUDChange}>
+              <option value="">Select Form</option>
+              <option value="GET">GET</option>
+              <option value="POST">POST</option>
+              <option value="PATCH">PATCH</option>
+              <option value="DELETE">DELETE</option>
+            </select>
+          </div>
+        </div>
+
+        <div className="render-form">
+          {renderForm()}
+        </div>
+      </section>
+      <div className="self-link">
+        <a href="https://github.com/sparklingwaterlemon/K16-Demo/" target="_blank" rel="noreferrer">GitHub</a>
       </div>
-      <div>
-        <select id="crud" value={selectedCRUD} onChange={handleCRUDChange}>
-          <option value="">Select Form</option>
-          <option value="GET">GET</option>
-          <option value="POST">POST</option>
-          <option value="PATCH">PATCH</option>
-          <option value="DELETE">DELETE</option>
-        </select>
-      </div>
-      <div>
-        {renderForm()}
-      </div>
-    </section>
+    </>
   );
 }

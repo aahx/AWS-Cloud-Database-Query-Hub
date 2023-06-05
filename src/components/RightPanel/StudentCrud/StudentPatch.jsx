@@ -57,13 +57,14 @@ export default function StudentPatch() {
 
     return (
         <>
-            <div>
+            <div className="crud-form">
                 <h2>Student PATCH Form</h2>
+                <span className="crud-det">
+                    Enter (one or all) Fields To Update
+                </span>
                 <form>
-                    <h3>Enter (one or all) Fields To Update</h3>
-                    <h4>* Student ID required</h4>
 
-                    <label htmlFor="studentId">Student ID*:</label>
+                    <label htmlFor="studentId">Student ID required*:</label>
                     <input
                         type="text"
                         name="studentId"
@@ -71,7 +72,7 @@ export default function StudentPatch() {
                         onChange={handleIdChange}
                         placeholder="Enter student ID"
                         required
-                    />
+                    /><br />
 
                     <label htmlFor="firstName">First Name:</label>
                     <input
@@ -80,7 +81,7 @@ export default function StudentPatch() {
                         value={studentData.first_name}
                         onChange={handleInputChange}
                         placeholder="Enter first name"
-                    />
+                    /><br />
 
                     <label htmlFor="lastName">Last Name:</label>
                     <input
@@ -89,7 +90,7 @@ export default function StudentPatch() {
                         value={studentData.last_name}
                         onChange={handleInputChange}
                         placeholder="Enter last name"
-                    />
+                    /><br />
 
                     <label htmlFor="email">Email:</label>
                     <input
@@ -110,7 +111,7 @@ export default function StudentPatch() {
                 </form>
             </div>
 
-            <div>
+            <div className="crud-res">
                 <h2>Data:</h2>
                 {responseData && (
                     <div>

@@ -1,15 +1,159 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
 }
+
 #container {
   display: flex;
 }
 
 #left-panel,
 #right-panel {
+  min-height: 70vh;
+  max-height: 70vh;
   flex-basis: 50%;
-  outline: 2px solid gray;
   padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+#left-panel {
+  border: 2px solid gray;
+  border-right: none;
+}
+
+#right-panel {
+  border: 2px solid gray;
+}
+
+.select-form {
+  height: 150px;
+  min-height: 120px;
+  width: 400px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.select-form h1 {
+  display: table-cell;
+  vertical-align: middle;
+  height: 60px;
+  width: 350px;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.db-data {
+  max-width: 400px;
+  height: 100%;
+  outline: 1px solid gray;
+  overflow: auto;
+  padding-left: 1em;
+}
+
+.db-data h2 {
+  margin: 0;
+}
+
+.db-data pre {
+  margin: 0;
+}
+
+
+
+.select-form-right {
+  height: 150px;
+  min-height: 120px;
+  max-height: 120px;
+  width: 400px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.select-form-right h1 {
+  display: table-cell;
+  vertical-align: middle;
+  height: 60px;
+  width: 350px;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.select-form-right select {
+  margin-top: 10px;
+  margin-right: 55px;
+}
+
+.render-form {
+  max-width: 400px;
+  height: 800px;
+  overflow: auto;
+}
+
+.crud-form {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid gray;
+  border-style: solid solid none solid;
+  padding-left: 1em;
+  height: 45%;
+}
+
+.crud-det {
+  font-size: 13px;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.crud-form h2 {
+  margin: 0;
+}
+
+.crud-form input {
+  margin-bottom: 5px;
+}
+
+.crud-form input {
+  margin-left: 5px;
+}
+
+.crud-form button {
+  margin-left: 25px;
+  padding: 2px;
+}
+
+.crud-res {
+  border: 1px solid gray;
+  height: 53%;
+  max-width: 400px;
+  padding-left: 1em;
+  overflow: auto;
+}
+
+.crud-res h2 {
+  margin: 0;
+
+}
+
+.crud-res pre {
+  margin: 0;
+}
+
+.self-link {
+  font-size: 15px;
+  padding-left: 5px;
+  position: absolute;
+  text-align: bottom;
+}
+
+.self-link a {
+  text-decoration: underline;
 }

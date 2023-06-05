@@ -32,18 +32,25 @@ export default function StudentGet() {
 
     return (
         <>
-            <div>
+            <div className="crud-form">
                 <h2> Student GET Form</h2>
                 <form>
-                    <label htmlFor="studentId">Enter Student ID:</label>
-                    <input type="text" name="studentId" value={studentId} onChange={handleInputChange} placeholder="1" required />
+                    <label htmlFor="studentId">Enter Student ID:</label><br />
+                    <input
+                        type="text"
+                        name="studentId"
+                        value={studentId}
+                        onChange={handleInputChange}
+                        placeholder="1"
+                        required
+                    />
                     <button type="button" onClick={fetchData} disabled={!studentId || loading}>
                         {loading ? 'Loading...' : 'Return'}
                     </button>
                 </form>
             </div>
 
-            <div>
+            <div className="crud-res">
                 <h2>Data:</h2>
                 {data && (
                     <div>

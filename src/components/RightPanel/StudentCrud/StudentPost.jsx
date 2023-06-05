@@ -27,7 +27,7 @@ export default function StudentPost() {
         const invokeURL = "https://feuzl6d9yk.execute-api.us-west-1.amazonaws.com/test/students";
 
         setLoading(true);
-                
+
         try {
             const response = await axios.post(invokeURL, studentData);
             setResponseData(response.data);
@@ -47,13 +47,14 @@ export default function StudentPost() {
 
     return (
         <>
-            <div>
+            <div className="crud-form">
                 <h2> Student POST Form</h2>
+                <span className="crud-det">
+                    Enter Student Info<br />
+                    * All inputs required
+                </span>
                 <form>
-                    <h3>Enter Student Info</h3>
-                    <h5>All inputs required</h5>
-
-                    <label htmlFor="firstName">First Name:</label>
+                    <label htmlFor="firstName">First Name*:</label>
                     <input
                         type="text"
                         name="first_name"
@@ -61,9 +62,9 @@ export default function StudentPost() {
                         onChange={handleInputChange}
                         placeholder="Michael"
                         required
-                    />
+                    /><br />
 
-                    <label htmlFor="lastName">Last Name:</label>
+                    <label htmlFor="lastName">Last Name*:</label>
                     <input
                         type="text"
                         name="last_name"
@@ -71,9 +72,9 @@ export default function StudentPost() {
                         onChange={handleInputChange}
                         placeholder="Kim"
                         required
-                    />
+                    /><br />
 
-                    <label htmlFor="email">Email:</label>
+                    <label htmlFor="email">Email*:</label>
                     <input
                         type="text"
                         name="email"
@@ -91,7 +92,7 @@ export default function StudentPost() {
                 </form>
             </div>
 
-            <div>
+            <div className="crud-res">
                 <h2>Data:</h2>
                 {responseData && (
                     <div>

@@ -32,13 +32,15 @@ export default function StudentDelete() {
 
     return (
         <>
-            <div>
+            <div className="crud-form">
                 <h2> Student DELETE Form</h2>
-                <h3> Deletion Permanent </h3>
-                <h4> To view changes , Reload left panel </h4>
+                <span className="crud-det">
+                    Deletion Permanent<br />
+                    To view changes , Reload left panel
+                </span>
 
                 <form>
-                    <label htmlFor="studentId">Enter Student ID:</label>
+                    <label htmlFor="studentId">Enter Student ID:</label><br />
                     <input type="text" name="studentId" value={studentId} onChange={handleInputChange} placeholder="1" required />
                     <button type="button" onClick={fetchData} disabled={!studentId || loading}>
                         {loading ? 'Loading...' : 'Return'}
@@ -46,7 +48,7 @@ export default function StudentDelete() {
                 </form>
             </div>
 
-            <div>
+            <div className="crud-res">
                 <h2>Data:</h2>
                 {data && (
                     <div>

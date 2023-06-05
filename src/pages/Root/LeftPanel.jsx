@@ -8,11 +8,11 @@ export default function LeftPanel() {
   const [selectedDatabase, setSelectedDatabase] = useState('');
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState(null);
-  
+
   const handleDatabaseChange = (event) => {
     setSelectedDatabase(event.target.value);
   };
-  
+
   const handleLoadClick = async () => {
     const invokeURL = "https://feuzl6d9yk.execute-api.us-west-1.amazonaws.com/test";
 
@@ -36,8 +36,8 @@ export default function LeftPanel() {
 
   return (
     <section id="left-panel">
-      <div>
-        <h1> LeftPanel.jsx</h1>
+      <div className="select-form">
+        <h1> Database </h1>
         <select value={selectedDatabase} onChange={handleDatabaseChange}>
           <option value="">Select a database</option>
           <option value="health">API Health Check</option>
@@ -48,7 +48,7 @@ export default function LeftPanel() {
         </button>
       </div>
 
-      <div>
+      <div className="db-data">
         <h2>Data:</h2>
         {data && (
           <div id="db-data-div">
