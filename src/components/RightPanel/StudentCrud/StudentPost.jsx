@@ -34,22 +34,26 @@ export default function StudentPost() {
 
     const handleSubmit = async () => {
         const invokeURL = "https://feuzl6d9yk.execute-api.us-west-1.amazonaws.com/test/students";
+        const testURL = "https://dummy.restapiexample.com/api/v1/create";
 
         setLoading(true);
         
         console.log("*** sd ***");
         console.log(studentData);
 
-        const res = await fetch(invokeURL, {
+        const res = await fetch(testURL, {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
+            headers: { 
+                'Content-Type': 'application/json',
+                "Access-Control-Allow-Headers" : "*"
+            },
             body: JSON.stringify(studentData)
         });
         
         if(res.ok){
             console.log("*** ok ***")
-            console.log(res.json());
-            return res.json();
+            console.log(res);
+            return res;
         } else {
             throw new Error("Invalid Sign Up");
         }
