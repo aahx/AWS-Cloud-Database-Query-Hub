@@ -32,13 +32,48 @@ To access the application, please follow this [link](insert_link_here).
 - **Lucid Chart**: Lucid Chart is used for creating the Entity Relationship Diagram (ERD).
 
 ## Architecture
->insert image
+![chart](https://github.com/sparklingwaterlemon/K16-Demo/assets/105463926/5bf82985-d94f-41bf-839c-8255d5954e8f)
 
 ## ERD
-> insert image
+![K16 - Page 1](https://github.com/sparklingwaterlemon/K16-Demo/assets/105463926/89810dad-d206-4ef8-b942-6e5a07a359a4)
 
 ### SQL
-> 
+```
+CREATE TABLE student (
+  student_id SERIAL PRIMARY KEY,
+  first_name VARCHAR(25) NOT NULL,
+  last_name VARCHAR(25) NOT NULL,
+  email VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE course (
+  course_id SERIAL PRIMARY KEY,
+  name VARCHAR(25) NOT NULL,
+  description TEXT
+);
+
+CREATE TABLE registration (
+  registration_id SERIAL PRIMARY KEY,
+  student_id INT NOT NULL,
+  course_id INT NOT NULL,
+  FOREIGN KEY (student_id) REFERENCES student(student_id),
+  FOREIGN KEY (course_id) REFERENCES course(course_id)
+);
+
+CREATE TABLE assignment (
+  assignment_id SERIAL PRIMARY KEY,
+  course_id INT NOT NULL,
+  name VARCHAR(25) NOT NULL,
+  description TEXT,
+  FOREIGN KEY (course_id) REFERENCES course(course_id)
+);
+
+CREATE TABLE student_assignment (
+  student_assignment_id SERIAL PRIMARY KEY,
+  student_id INT NOT NULL,
+  assignment_id INT NOT NULL
+);
+```
 
 ## Backlog
 Due to time constraints, I was only able to create the React app with the student database. The next steps would involve incorporating the other tables into the app.
