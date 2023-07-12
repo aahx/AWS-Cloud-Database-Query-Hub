@@ -1,14 +1,16 @@
 /* eslint-disable react-refresh/only-export-components */
 /* eslint-disable no-unused-vars */
+
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 
 
 export default function LeftPanel() {
-  const [selectedDatabase, setSelectedDatabase] = useState('');
-  const [loading, setLoading] = useState(false);
-  const [data, setData] = useState(null);
+  const [selectedDatabase, setSelectedDatabase] = useState(''); // for dropdown
+  const [loading, setLoading] = useState(false); // loading / pending state
+  const [data, setData] = useState(null); // data
 
+  // Once you select a db from dropdown, handlDBChange -> setSDB
   const handleDatabaseChange = (event) => {
     setSelectedDatabase(event.target.value);
   };
@@ -16,11 +18,12 @@ export default function LeftPanel() {
   const handleLoadClick = async () => {
     const invokeURL = "https://feuzl6d9yk.execute-api.us-west-1.amazonaws.com/test";
 
+    // Base
     if (!selectedDatabase) {
       return;
     }
 
-    setLoading(true);
+    setLoading(true); // while Loading = true, button to fetch is disabled
 
     try {
       const response = await axios.get(`${invokeURL}/${selectedDatabase}`);
