@@ -52,12 +52,16 @@ export default function LeftPanel() {
       </div>
 
       <div className="db-data">
-        <h2>Data:</h2>
+        <h1> Adding new features </h1>
+        <h2> Current DT - July 13 - 6:20 PM </h2>
+        <h2> Expected to be up again on July 14 </h2>
+        
+        {/* <h2>Data:</h2>
         {data && (
           <div id="db-data-div">
             <pre>{JSON.stringify(data, null, 2)}</pre>
           </div>
-        )}
+        )} */}
       </div>
     </section>
   );
